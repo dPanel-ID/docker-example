@@ -14,21 +14,9 @@ $ docker run \
     --user $(id -u):$(id -g) \
     --volume ./musics:/music \
     --volume ./data:/data \
-    --publish ${PORT}:4533 \
     --env ND_LOGLEVEL=info \
+    --publish ${PORT}:4533 \
     --network-alias ${DPANEL_SYSTEM_APP_NAME}-${DPANEL_SYSTEM_LINUX_USER} \
     --name ${DPANEL_SYSTEM_APP_NAME}-${DPANEL_SYSTEM_LINUX_USER} \
     --hostname ${DPANEL_SYSTEM_APP_NAME}-${DPANEL_SYSTEM_LINUX_USER} \
     deluan/navidrome:latest
-
-
-docker run \
-    --network dpanel-network \
-    --volume filebrowser_data:/srv \
-    --volume filebrowser_database:/database \
-    --volume filebrowser_config:/config \
-    --publish ${PORT}:80 \
-    --network-alias ${DPANEL_SYSTEM_APP_NAME}-${DPANEL_SYSTEM_LINUX_USER} \
-    --name ${DPANEL_SYSTEM_APP_NAME}-${DPANEL_SYSTEM_LINUX_USER} \
-    --hostname ${DPANEL_SYSTEM_APP_NAME}-${DPANEL_SYSTEM_LINUX_USER} \
-    filebrowser/filebrowser

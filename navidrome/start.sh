@@ -8,7 +8,7 @@ docker rm ${DPANEL_SYSTEM_APP_NAME}-${DPANEL_SYSTEM_LINUX_USER} || true
 
 # Start the container, and map port ${PORT} to port 80 in the container.
 
-$ docker run \
+docker run \
     --network dpanel-network \
     --restart=unless-stopped \
     --user $(id -u):$(id -g) \

@@ -15,7 +15,7 @@ We know what docker compose is just a tool to help you to manage multiple Docker
 ![Prerequisite Fill Repository Information](assets/app-data.png)
 5. Check and manage your applications
 ![Application List](assets/applications.png)
-![Application Detail](assets/application-detail.png)
+![Application Detail](assets/app-detail.png)
 6. Manage docker service running inside systemd
 ![Prerequisite Manage Service](assets/manage-services.png)
 

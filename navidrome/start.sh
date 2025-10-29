@@ -1,13 +1,10 @@
 #!/bin/bash
 
-# create network if it is not exist
-docker network create dpanel-network || true
 
 # exit container if it is running
 docker rm ${DPANEL_SYSTEM_APP_NAME}-${DPANEL_SYSTEM_LINUX_USER} || true
 
 # Start the container, and map port ${PORT} to port 80 in the container.
-
 docker run \
     --network dpanel-network \
     --restart=unless-stopped \

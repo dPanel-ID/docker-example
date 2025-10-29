@@ -1,8 +1,5 @@
 #!/bin/bash
 
-# create network if it is not exist
-docker network create dpanel-network || true
-
 # exit container if it is running
 docker rm ${DPANEL_SYSTEM_APP_NAME}-${DPANEL_SYSTEM_LINUX_USER} || true
 

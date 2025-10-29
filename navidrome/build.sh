@@ -6,4 +6,7 @@ echo "You can use build script to preparing any environment for your project. Su
 
 mkdir -p data musics
 
+# create network if it is not exist
+docker network create dpanel-network || true
+
 docker pull deluan/navidrome:latest

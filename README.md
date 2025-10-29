@@ -13,8 +13,11 @@ We know what docker compose is just a tool to help you to manage multiple Docker
 ![Prerequisite Register Git Repository](assets/add-repository.png)
 4. Fill the repository information
 ![Prerequisite Fill Repository Information](assets/app-data.png)
-5. Now you have docker running inside systemd
-![Prerequisite Manage Service](assets/manage-service.png)
+5. Check and manage your applications
+![Application List](assets/applications.png)
+![Application Detail](assets/application-detail.png)
+6. Manage docker service running inside systemd
+![Prerequisite Manage Service](assets/manage-services.png)
 
 
 Trust me!, you container can communicate with others container deploy from other repository and also with the host with alias `host.docker.internal`. Just make sure you use the same docker network.

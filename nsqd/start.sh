@@ -8,6 +8,7 @@ docker run \
     --network dpanel-network \
     --restart=unless-stopped \
     --user $(id -u):$(id -g) \
+    --volume ./data:/data \
     --publish 4150:4150 \
     --publish 4151:4151 \
     --network-alias ${DPANEL_SYSTEM_APP_NAME}-${DPANEL_SYSTEM_LINUX_USER} \

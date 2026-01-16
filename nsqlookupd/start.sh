@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # remove container, make sure clean start
-docker rm ${DPANEL_SYSTEM_APP_NAME}-${DPANEL_SYSTEM_LINUX_USER} || true
+docker rm ${DPANEL_SYSTEM_APP_NAME}-${DPANEL_SYSTEM_LINUX_USER} --force || true
 
 # Start container nsqlookupd
 docker run \
